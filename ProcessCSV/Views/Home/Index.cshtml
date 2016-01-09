@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("UploadCSVFile", "Home", FormMethod.Post, new { @id = "uploadForm", @enctype = "multipart/form-data" }))
+{
+    <div class="row">
+        <div class="col-sm-6">
+            Upload File
+        </div>
+        <div class="col-sm-6">
+            <input type="file" accept="csv" name="csvfile" id="csvfile" />
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-6">
+                <input type="submit" value="Submit" id="btnUpload" />
+            </div>
+        </div>
+
+    </div>
+
+
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/custom/myScript.js"></script>
